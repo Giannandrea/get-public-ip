@@ -1,0 +1,91 @@
+{
+    "opendns_params": {
+        "v4": {
+            "dnsServer1": "208.67.222.222",
+            "dnsServer2": "208.67.220.220",
+            "dnsQuery": {
+                "name": "myip.opendns.com",
+                "type": "A"
+            }
+        }
+    },
+    "googledns_params": {
+        "v4": {
+            "dnsServer1": "8.8.8.8",
+            "dnsServer2": "8.8.4.4",
+            "dnsQuery": {
+                "name": "o-o.myaddr.l.google.com",
+                "type": "TXT"
+            }
+        }
+    },
+    "http_params": {
+        "v4": {
+            "http": {
+                "host": "whatismyip.akamai.com",
+                "path": "/",
+                "port": 80
+            },
+            "https": {
+                "host": "icanhazip.com",
+                "path": "/",
+                "port": 443
+            },
+            "akamai": {
+                "host": "whatismyip.akamai.com",
+                "path": "/",
+                "port": 80
+            },
+            "amazon_aws": {
+                "host": "checkip.amazonaws.com",
+                "path": "/",
+                "port": 80
+            },
+            "dyndns": {
+                "host": "checkip.dyndns.org",
+                "path": "/",
+                "port": 80
+            },
+            "i_can_haz_ip": {
+                "host": "icanhazip.com",
+                "path": "/",
+                "port": 80
+            },
+            "ident_me": {
+                "host": "ident.me",
+                "path": "/",
+                "port": 80
+            },
+            "ifconfig_me": {
+                "host": "ifconfig.me",
+                "path": "/ip",
+                "port": 80
+            },
+            "ip_echo": {
+                "host": "ipecho.net",
+                "path": "/plain",
+                "port": 80
+            },
+            "ip_info": {
+                "host": "ipinfo.io",
+                "path": "/ip",
+                "port": 80
+            },
+            "ip_ogre": {
+                "host": "ipogre.com",
+                "path": "/",
+                "port": 80
+            },
+            "smart_ip": {
+                "host": "smart-ip.net",
+                "path": "/myip",
+                "port": 80
+            },
+            "what_is_my_ip_address": {
+                "host": "bot.whatismyipaddress.com",
+                "path": "/",
+                "port": 80
+            }
+        }
+    }
+}

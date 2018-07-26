@@ -1,23 +1,24 @@
 {
-    "name": "get-public-ip",
-    "version": "0.1.0",
-    "description": "A module for detecting public ip from google or open DNS",
-    "main": "index.js",
-    "scripts": {
-      "start": "node index.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/giannandrea/get-public-ip.git"
-    },
-    "keywords": [
-      "ip",
-      "public",
-      "lookup"
-    ],
-    "author": "Mauro Giannandrea",
-    "license": "MIT",
-    "dependencies": {
-      "dns": "<3.x.x"
-    }
+  "name": "get-public-ip",
+  "version": "0.1.0",
+  "description": "A module for detecting public ip from google or open DNS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giannandrea/get-public-ip.git"
+  },
+  "keywords": [
+    "ip",
+    "public",
+    "lookup"
+  ],
+  "author": "Mauro Giannandrea",
+  "license": "MIT",
+  "dependencies": {
+    "dns": "<3.x.x",
+    "get-public-ip": "https://github.com/Giannandrea/get-public-ip/tarball/master"
   }
+}

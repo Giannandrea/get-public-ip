@@ -1,7 +1,7 @@
 var resolver = require('dns');
 var https = require("https");
 var http = require('http');
-var configurations = require('./resolvers.js');
+var ConfigResolvers = require('./resolvers.js');
 
 var PublicIpAddress = function PublicIpAddress() {
 
@@ -44,10 +44,12 @@ var PublicIpAddress = function PublicIpAddress() {
         });
     };
 
-    this.getPublicIpFromHTTP = function (callback) {
+    getPublicIpFromService = function (callback, service) {
         var version = "v4";
         var str = ''
-        var req = http.request(configurations.http_params[version]["http"], function (response) {
+        var options = ConfigResolvers.http_params[version]["http"]
+        options["headers"] = {"Host": options["host"]}
+        var req = http.request(options, function (response) {
             response.on('error', function (error) { 
                 throw new Error('Couldn\'t find your IP');
             });
@@ -62,21 +64,16 @@ var PublicIpAddress = function PublicIpAddress() {
     };
 
     this.getPublicIpFromHTTPS = function (callback) {
-        var version = "v4";
-        var str = ''
-        var req = https.request(config.http_params[version]['https'], function (response) {
-            response.on('error', function (error) { 
-                throw new Error('Couldn\'t find your IP');
-            });
-            response.on('data', function (chunk) { 
-                str += chunk;
-            });
-            response.on('end', function () {
-                callback(null, str);
-              });
-        });
-        req.end();
-    };
+        getPublicIpFromService(callback, "https");
+    }
+
+    this.getPublicIpFromHTTP = function (callback) {
+        getPublicIpFromService(callback, "http");
+    }
+
+    this.getPublicIpFrom = function (service, callback) {
+        getPublicIpFromService(callback, service);
+    }
 };
 
 module.exports = new PublicIpAddress();
