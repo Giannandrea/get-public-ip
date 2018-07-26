@@ -22,7 +22,7 @@ The decision of support also old nodejs versions is due the fact that starting f
 
 ## Installation
     
-    npm install get-public-ip
+    npm install --save https://github.com/Giannandrea/get-public-ip/tarball/master
 
 ## License
 
