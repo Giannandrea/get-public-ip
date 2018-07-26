@@ -34,6 +34,22 @@ It takes a function callback as parameter witch is called with IPV4 public addre
 #### getPublicIpFromHTTPS(callback)
 It takes a function callback as parameter witch is called with IPV4 public address retrieved by https icanhazip.com provider.
 
+### getPublicIpFrom(service, callback)
+It takes a service string and function callback as parameter witch is called with IPV4 public address retrieved by one of the supported services.
+
+## supported services
+- akamai
+- amazon_aws
+- dyndns
+- i_can_haz_ip
+- ident_me
+- ifconfig_me
+- ip_echo
+- ip_info
+- ip_ogre
+- smart_ip
+- what_is_my_ip_address
+
 ## Installation
     
     npm install --save https://github.com/Giannandrea/get-public-ip/tarball/master
