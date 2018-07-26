@@ -22,16 +22,16 @@ The decision of support also old nodejs versions is due the fact that starting f
 
 ## API DOC
 
-### getPublicIpFromOpenDns(callback)
+#### getPublicIpFromOpenDns(callback)
 It takes a function callback as parameter witch is called with IPV4 public address retrieved by OpenDns query.
 
-### getPublicIpFromGoogleDns(callback)
+#### getPublicIpFromGoogleDns(callback)
 It takes a function callback as parameter witch is called with IPV4 public address retrieved by Google Dns query.
 
-### getPublicIpFromHTTP(callback)
+#### getPublicIpFromHTTP(callback)
 It takes a function callback as parameter witch is called with IPV4 public address retrieved by http whatismyip.akamai.com provider.
 
-### getPublicIpFromHTTPS(callback)
+#### getPublicIpFromHTTPS(callback)
 It takes a function callback as parameter witch is called with IPV4 public address retrieved by https icanhazip.com provider.
 
 ## Installation
