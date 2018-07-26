@@ -18,6 +18,6 @@
     "author": "Mauro Giannandrea",
     "license": "MIT",
     "dependencies": {
-      "dns": "3.x.x"
+      "dns": "<3.x.x"
     }
   }
