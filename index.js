@@ -13,7 +13,7 @@ var PublicIpAddress = function PublicIpAddress() {
         } catch (error) {
             return null;
         }
-    }
+    };
 
     performDnsQuery = function (settings, version, callback) {
         var type = settings[version].dnsQuery.type;
@@ -23,23 +23,6 @@ var PublicIpAddress = function PublicIpAddress() {
                 throw new Error('Couldn\'t find your IP');
             } else {
                 callback(null, addresses);
-            }
-        });
-    };
-
-    this.getPublicIpFromOpenDns = function (callback) {
-        var version = "v4";
-        performDnsQuery(config.opendns_params, version, callback);
-    };
-
-    this.getPublicIpFromGoogleDns = function (callback) {
-        var version = "v4";
-        performDnsQuery(config.googledns_params, version, function (err, addresses) {
-            var parsed_result = parse_google_result(addresses);
-            if (err && !parsed_result) {
-                throw new Error('Couldn\'t find your IP');
-            } else {
-                callback(null, parsed_result);
             }
         });
     };
@@ -63,17 +46,34 @@ var PublicIpAddress = function PublicIpAddress() {
         req.end();
     };
 
+    this.getPublicIpFromOpenDns = function (callback) {
+        var version = "v4";
+        performDnsQuery(config.opendns_params, version, callback);
+    };
+
+    this.getPublicIpFromGoogleDns = function (callback) {
+        var version = "v4";
+        performDnsQuery(config.googledns_params, version, function (err, addresses) {
+            var parsed_result = parse_google_result(addresses);
+            if (err && !parsed_result) {
+                throw new Error('Couldn\'t find your IP');
+            } else {
+                callback(null, parsed_result);
+            }
+        });
+    };
+
     this.getPublicIpFromHTTPS = function (callback) {
         getPublicIpFromService(callback, "https");
-    }
+    };
 
     this.getPublicIpFromHTTP = function (callback) {
         getPublicIpFromService(callback, "http");
-    }
+    };
 
     this.getPublicIpFrom = function (service, callback) {
         getPublicIpFromService(callback, service);
-    }
+    };
 };
 
 module.exports = new PublicIpAddress();
