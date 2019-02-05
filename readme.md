@@ -52,7 +52,7 @@ It takes a service string and function callback as parameter witch is called wit
 
 ## Installation
     
-    npm install --save https://github.com/Giannandrea/get-public-ip/tarball/master
+    npm install get-public-ip
 
 ## License
 
