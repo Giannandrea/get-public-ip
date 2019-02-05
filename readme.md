@@ -50,9 +50,11 @@ It takes a service string and function callback as parameter witch is called wit
 - smart_ip
 - what_is_my_ip_address
 
-## Installation
-    
+## Installation from public npm
     npm install get-public-ip
+
+## Installation from github
+    npm install --save https://github.com/Giannandrea/get-public-ip/tarball/master
 
 ## License
 
