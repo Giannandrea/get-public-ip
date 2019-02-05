@@ -48,12 +48,12 @@ var PublicIpAddress = function PublicIpAddress() {
 
     this.getPublicIpFromOpenDns = function (callback) {
         var version = "v4";
-        performDnsQuery(config.opendns_params, version, callback);
+        performDnsQuery(ConfigResolvers.opendns_params, version, callback);
     };
 
     this.getPublicIpFromGoogleDns = function (callback) {
         var version = "v4";
-        performDnsQuery(config.googledns_params, version, function (err, addresses) {
+        performDnsQuery(ConfigResolvers.googledns_params, version, function (err, addresses) {
             var parsed_result = parse_google_result(addresses);
             if (err && !parsed_result) {
                 throw new Error('Couldn\'t find your IP');
