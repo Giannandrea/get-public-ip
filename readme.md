@@ -12,7 +12,7 @@ The decision of support also old nodejs versions is due the fact that starting f
 
     var resolv = require('get-public-ip');
     resolv.getPublicIpFromOpenDns(function (err, address) {
-      if (error) {
+      if (err) {
         console.log("Error retreaving public ip: "+err);
         return;
       }
