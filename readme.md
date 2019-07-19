@@ -1,4 +1,4 @@
-get-public-ip provides dns, http, https methods to find public ip of the system running the script
+get-public-ip is one of the most faster library that provide public ip of the client using dns, http, https methods.
 
 ## Introduction
 
