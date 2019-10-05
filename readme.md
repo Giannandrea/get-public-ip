@@ -3,7 +3,7 @@ get-public-ip is one of the most faster library that provide public ip of the cl
 ## Introduction
 
 Currently, this project just provides simple client to find public ip using differents methologyes.
-It can use DNS resolution using 2 providers, OpenDNS and Google and classic http and https.
+It can use DNS resolution using Google as dns provider and classic http and https.
 
 Key points of this module is the ability to run on multiple nodejs version, testing on 0.10.x, 4.4.x, 6.9.x, 6.14.x, 8.11.x and should works also with newer versions. 
 The decision of support also old nodejs versions is due the fact that starting from version 0.10.x nodejs stop support architectures without FPU and some embedded software are still working on nodejs 0.10.x version.
