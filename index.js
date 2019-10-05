@@ -46,11 +46,6 @@ var PublicIpAddress = function PublicIpAddress() {
         req.end();
     };
 
-    this.getPublicIpFromOpenDns = function (callback) {
-        var version = "v4";
-        performDnsQuery(ConfigResolvers.opendns_params, version, callback);
-    };
-
     this.getPublicIpFromGoogleDns = function (callback) {
         var version = "v4";
         performDnsQuery(ConfigResolvers.googledns_params, version, function (err, addresses) {

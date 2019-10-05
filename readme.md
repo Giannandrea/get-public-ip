@@ -11,7 +11,7 @@ The decision of support also old nodejs versions is due the fact that starting f
 ## Usage
 
     var resolv = require('get-public-ip');
-    resolv.getPublicIpFromOpenDns(function (err, address) {
+    resolv.getPublicIpFromGoogleDns(function (err, address) {
       if (err) {
         console.log("Error retreaving public ip: "+err);
         return;
@@ -22,8 +22,8 @@ The decision of support also old nodejs versions is due the fact that starting f
 
 ## API DOC
 
-#### getPublicIpFromOpenDns(callback)
-It takes a function callback as parameter witch is called with IPV4 public address retrieved by OpenDns query.
+#### (Retired) getPublicIpFromOpenDns(callback)
+OpenDNS stop this function, and replace it with a http service.
 
 #### getPublicIpFromGoogleDns(callback)
 It takes a function callback as parameter witch is called with IPV4 public address retrieved by Google Dns query.
@@ -49,6 +49,7 @@ It takes a service string and function callback as parameter witch is called wit
 - ip_ogre
 - smart_ip
 - what_is_my_ip_address
+- opendns
 
 ## Installation from public npm
     npm install get-public-ip

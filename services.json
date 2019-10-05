@@ -1,14 +1,4 @@
 {
-    "opendns_params": {
-        "v4": {
-            "dnsServer1": "208.67.222.222",
-            "dnsServer2": "208.67.220.220",
-            "dnsQuery": {
-                "name": "myip.opendns.com",
-                "type": "A"
-            }
-        }
-    },
     "googledns_params": {
         "v4": {
             "dnsServer1": "8.8.8.8",
@@ -30,7 +20,7 @@
                 "host": "icanhazip.com",
                 "path": "/",
                 "port": 443
-            },
+            },			
             "akamai": {
                 "host": "whatismyip.akamai.com",
                 "path": "/",
@@ -84,6 +74,11 @@
             "what_is_my_ip_address": {
                 "host": "bot.whatismyipaddress.com",
                 "path": "/",
+                "port": 80
+            },
+            "opendns": {
+                "host": "diagnostic.opendns.com",
+                "path": "/myip",
                 "port": 80
             }
         }
